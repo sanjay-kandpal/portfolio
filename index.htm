@@ -12,13 +12,11 @@
     <header id="body-header">
         <div class="nav-bar">
             <nav id="nav-bar">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Skills</a>
-                <a href="">Experience</a>
-                <a href="">Education</a>
-                <a href="">Portfolio</a>
-                <a href="">Contact</a>
+                <a href="#">Home</a>               
+                <a href="#skills">Skills</a>
+                <a href="#experience">Education</a>
+                <a href="#portfolio">Work</a>
+                <a href="#contact-us">Contact</a>
             </nav>
         </div>
         <div id="name-social-container">
@@ -26,10 +24,10 @@
                 <h1 id="my-name">Sanjay Kandpal</h1>
             </div>            
             <div class="social-icons">
-                <a href=""><i class="fa-brands fa-quora fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-stack-overflow fa-2x"></i></a>                
+                <a href="https://github.com/sanjay-kandpal" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+                <a href="https://www.facebook.com/sanjay.kandpal.9421/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                <!-- <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                <a href=""><i class="fa-brands fa-stack-overflow fa-2x"></i></a>                 -->
             </div>
         </div>
 
@@ -38,10 +36,10 @@
     <main id="container" class="container">
         <section id="about">
             <div id="my-image">
-                <img src="https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png" alt="my image">
+                <img src="./assets/my_image.jpeg" alt="my image">
             </div>
             <div id="about-para">
-                <p>Lorem ipsum dolor sit amet consectetur <strong> elit</strong>. Nihil ea nobis, fugiat dolorum exercitationem pariatur<strong> omnis </strong>accusamus, dolores voluptatem beatae minima eius praesentium adipisci et at dolore nostrum tempora? Ab?Lorem ipsum dolor sit<strong> amet</strong> consectetur adipisicing elit. Quasi magni debitis temporibus, deserunt, fuga aliquid molestiae dolor qui vel vitae tenetur quidem <strong>necessitatibus</strong> veritatis placeat? Numquam veritatis aliquam sint quae!</p>
+               
             </div>
             
         </section>
@@ -85,26 +83,19 @@
                 <div class="skill-progress">
                     <div class="thirty-percent mb-yellow common-border">
                         <div class="skill-name">
-                            <span>ReactJs</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="eighty-percent mb-blue common-border">
-                        <div class="skill-name">
                             <span>expressJs</span>
                         </div>
                     </div>
                 </div>
                 <div class="skill-progress">
-                    <div class="eighty-percent mb-blue common-border">
+                    <div class="thirty-percent mb-yellow common-border">
                         <div class="skill-name">
                             <span>EJS</span>
                         </div>
                     </div>
                 </div>
                 <div class="skill-progress">
-                    <div class="eighty-percent mb-blue common-border">
+                    <div class="thirty-percent mb-yellow common-border">
                         <div class="skill-name">
                             <span>MongoDb</span>
                         </div>
@@ -114,31 +105,37 @@
         </section>
         <section id="experience">
             <h1 class="section-heading mb75px">
-                <span><i class="fa-solid fa-briefcase"></i></span><span> Work Experience</span>
+                <span><i class="fa-solid fa-user-graduate"></i></span><span> Education</span>
             </h1>
             <div class="timeline">
                 <div class="timeline-box left">
                     <div class="timeline-container">
                         <div class="timeline-logo">
-                            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000032_1550746413_iiitd_logo.png">
+                            <img src="https://smslucknow.edugrievance.com/Assets/img/icons/logo.png">
                         </div>
-                        <h3 class="experience-designation  m0 m-blue"> Degree </h3>
-                        <h4 class="experience-company-name "> Institute Name </h4>
-                        <h5 class="experience-duration m0"> Month YYYY - Month YYYY </h5>
+                        <h3 class="experience-designation  m0 m-blue"> B.C.A </h3>
+                        <h4 class="experience-company-name "> School of Management Sciences</h4>
+                        <h5 class="experience-duration m0"> july 2019 - july 2022 </h5>
 
-                        <p class="experience-description text-align-justify"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        <p class="experience-description text-align-justify">An undergraduate student at School of Management Sciences,Lucknow, India. I have completed my undergraduate with 72.8 percentage.</p>
                     </div>
 
                 </div>
                 <div class="timeline-box right">
+
+                    <div class="timeline-container">
+                        <div class="timeline-logo">
+                            <img src="https://www.apsnrlucknow.org/images/logo.png" height="100px">
+                        </div>
+                        <h3 class="experience-designation  m0 m-blue"> 12<sup>th</sup> </h3>
+                        <h4 class="experience-company-name ">Army public school</h4>
+                        <h5 class="experience-duration m0"> july 2017 - july 2019 </h5>
+
+                        <p class="experience-description text-align-justify">I have completed my HighSchool from Army Public school Nehru Road,Lucknow with First Division.</p>
+                    </div>
                     
                 </div>
-                <div class="timeline-box">
-                    
-                </div>
-                <div class="timeline-box">
-                    
-                </div>
+               
                 <div class="timeline-divider">
                     <div class="timeline-traveller">
                      <i class="fa fa-plane"></i>
@@ -152,69 +149,52 @@
                 <span>
                     <i class="fas fa-th-list"></i>
                 </span>
-                <span> Portfolio </span>
+                <span> Work </span>
             </h1>
 
             <div id="portfolio-container">
 
                 <div class="portfolio-image-container">
-                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png">
+                  <a href="https://sanjay-kandpal.github.io/responsive-site/livingRes.htm" target="_blank">
+                    <img src="https://quintagroup.com/services/web-design/responsive-website-design.png">
                     <div class="portfolio-details">
                         <p>
-                            Write here basic details about the project.
+                            Responsive Design<br>
+                            approach to web page creation that makes use of flexible layouts, flexible images and cascading style sheet media queries.
                         </p>
-                    </div>
+                    </div>                    
+                  </a>
+                    
 
                 </div>
                 <div class="portfolio-image-container">
-                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000026_1550237353_project_2.jpeg">
-                    <div class="portfolio-details">
+                    <a href="https://sanjay-kandpal.github.io/jsCalculator/" target="_blank">
+                        <img src="https://images.pexels.com/photos/907489/pexels-photo-907489.jpeg">
+                   
+                     <div class="portfolio-details">
                         <p>
-                            Write here basic details about the project.
+                           <b>Calculator</b> 
                         </p>
-                    </div>
+                        <p>enables the users to perform fundamental  operations such as addition, subtraction, multiplication and division on their browser.</p>
+                     </div>
+                    </a>
 
                 </div>
                 <div class="portfolio-image-container">
-                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000029_1550237386_project.jpeg">
-                    <div class="portfolio-details">
-                        <p>
-                            Write here basic details about the project.
-                        </p>
-                    </div>
-
+                    <a href="">
+                        <img src="https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?cs=srgb&dl=pexels-daniel-absi-952670.jpg&fm=jpg">
+                        <div class="portfolio-details">
+                            
+                            <p>More(SOON)...</p>    
+                            
+                        </div>
+                    </a>                   
                 </div>
-                <div class="portfolio-image-container">
-                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000027_1550237355_project_3.png">
-                    <div class="portfolio-details">
-                        <p>
-                            Write here basic details about the project.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="portfolio-image-container">
-                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png">
-                    <div class="portfolio-details">
-                        <p>
-                            Write here basic details about the project.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="portfolio-image-container">
-                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000028_1550237365_tree.jpeg">
-                    <div class="portfolio-details">
-                        <p>
-                            Write here basic details about the project.
-                        </p>
-                    </div>
-
-                </div>
+                
 
             </div>
         </section>
-        <section id="contact-us">
+        <section id="contact-us" >
             <h1 class="section-heading mb75px">
                 <span><i class="fa-solid fa-address-card"style="color: white"></i></span>
                 <span id="contact" class="heading">Contact</span>
@@ -242,18 +222,19 @@
                 </div>
                 <div class="address">
                     <h1 class="heading">Get in touch</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laboriosam fugiat possimus illum officia distinctio, officiis alias amet ipsum voluptate minima quo repellendus reiciendis eveniet facilis minus eum iure optio!</p>
+                    <p>The following e-mail and phone numbers are only for professional purposes. Contact them only if you are hiring for internships in  Front-end.</p>
                     <div class="address-details">
                         <h1 class="heading">My Address</h1>
                         <p><i class="fa-solid fa-location-pin"></i>Lucknow,India</p>
-                        <p><i class="fa-solid fa-mobile"></i>999999999</p>
+                        <p><i class="fa-solid fa-mobile"></i>7355151245</p>
                         <p><i class="fa-solid fa-envelope"></i>importantkandpal@gmail.com</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="script.js"></script>
 
     
 </body>

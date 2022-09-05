@@ -53,6 +53,7 @@ body{
     width: 100%;
     position: relative;
 }
+
 #my-image{
     height: 12rem;
     width: 12rem;
@@ -62,6 +63,9 @@ body{
 #my-image img{
     height: 100%;
     width: 100%;
+    background-position: center;
+    
+    background-attachment: fixed;
     border-radius: 50%;
 }
 section{
@@ -71,27 +75,25 @@ section{
 
 }
 section:nth-child(2n){
-    background-color: lightgrey;
+    background-color: white;
 }
 section:nth-child(2n + 1){
     background-color: white;
 }
 #about-para{
-    margin-top: 3vh;
+    color: purple;
     display: inline-block;
     width: 50%;
+    font: 700 normal 2.5em 'tahoma';
     margin: 3vh auto;
 }
-#about-para p{
-    text-align: left;
-    font-size: 1.5rem;
-    color: brown;
-}
+
 strong{
     color: darkblue;
     font-weight: 600;
 }
 .skills-display{
+    
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -99,6 +101,7 @@ strong{
     flex-wrap: wrap;    
 }
 .skill-progress{
+    border: 1px solid black;
     background-color: white;
     width: 15%;
     margin: 2.8rem;
@@ -154,12 +157,12 @@ strong{
     margin: auto;
     position: relative;
     width: 75%;
-    border: 2px solid black;
+    
 
 }
 .timeline-box{
     margin: 5px;
-    border: 2px solid black;
+   
     position: relative;
     width: 40%;
     left: 5%;
@@ -172,23 +175,23 @@ strong{
     content: '';
     position: absolute;
     top: 30%;
-    right: -12%;
+    right: -11%;
     border-radius: 50%;
     width: 0.5rem;
     height: 0.5rem;
-    background-color: red;
-    z-index: 1;
+
+
 }
 .timeline-box:nth-child(2n):after{
     content: '';
     position: absolute;
     top: 30%;
-    left: -9.74%;
+    left: -15.74%;
     border-radius: 50%;
     width: 0.5rem;
     height: 0.5rem;
-    background-color: red;
-    z-index: 2;
+    
+    
 }
 .timeline-divider{
     position: absolute;
@@ -235,7 +238,7 @@ strong{
 }
 
 .timeline-box:nth-child(2n+1)::after {
-    right: -11.8%;
+    right: -10.2%;
 }
 
 .timeline-box:nth-child(2n)::after {
@@ -248,7 +251,7 @@ strong{
 
 .timeline-logo {
     position: absolute;
-    width: 50px;
+    width: 238px;
     overflow: hidden;
 }
 
@@ -261,9 +264,9 @@ strong{
     width: 0;
     top: 10%;
     left: 50%;
-    border: 1px dashed #0096fa6b;
+   
     height: 66%;
-    color: #433E3F;
+   
 }
 
 #timeline-divider .timeline-traveller {
@@ -276,7 +279,7 @@ strong{
     transform: rotate(90deg);
     margin-top: -35px;
     display: block;
-    color: #2857a4;
+    
 }
 
 .experience-designation {
@@ -286,8 +289,9 @@ strong{
 .experience-company-name {
     margin: 5px 0 0;
     color: #eb822d;
-    font-weight: 400;
-    font-size: 1.2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+
 }
 
 .experience-duration {
@@ -313,6 +317,7 @@ strong{
 #portfolio-container {
     box-sizing: border-box;
     display: flex;
+    
     flex-wrap: wrap;
     padding: 0 50px;
     margin-bottom: 20px;
@@ -321,6 +326,7 @@ strong{
 
 .portfolio-image-container {
     max-width: 300px;
+    
     overflow: hidden;
     margin: 10px;
     background-size: cover;
@@ -337,11 +343,13 @@ strong{
     transition: all 0.5s ease-in-out;
     position: absolute;
     top: 0;
+    text-align: left;
     left: 0;
     height: 100%;
     color: transparent;
-    text-align: center;
+   
     padding: 10px;
+    width: 100%;
 }
 
 .portfolio-image-container:hover {
@@ -357,17 +365,13 @@ strong{
 #contact-us{
     background: #FC466B;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3F5EFB 30%, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #3F5EFB 30%, #FC466B);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 .contact-details{  
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-content: center;
-}
-.query-form{
-    border: 1px solid black;
 }
 .query-form div{
 
@@ -401,7 +405,6 @@ strong{
 .address{
     text-align: left;
     margin: 16px;
-    border: 1px solid black;
 }
 .heading{
     color: white;
