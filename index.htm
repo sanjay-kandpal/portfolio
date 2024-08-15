@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
@@ -21,7 +24,7 @@
         </div>
         <div id="name-social-container">
             <div class="text-center">
-                <h1 id="my-name">Sanjay <span>Kandpal</span></h1>
+                <h1 id="my-name">Sanjay <span id="name-surname">Kandpal</span></h1>
             </div>            
             <div class="social-icons">
                 <a href="https://github.com/sanjay-kandpal" target="_blank"><i class="fa-brands fa-github fa-2x" style="color: #fff; background-color: #333; padding: 10px; border-radius: 50%"></i></a>
@@ -38,7 +41,7 @@
     <main id="container" class="container">
         <section id="about">
             <div id="my-image">
-                <img src="./assets/my_image.jpeg" alt="my image">
+                <img src="./assets/my_image.JPG" alt="my image">
             </div>
             <div id="about-para">
                
@@ -50,7 +53,7 @@
           
             <h1 class="section-heading mb75px">
              <span><i class="fa-solid fa-chalkboard-teacher "></i></span>
-             <span>SKILLS</span>
+             <span class="underline">SKILLS</span>
             </h1>
 
             <div class="skills-display">
@@ -166,8 +169,6 @@
                         </p>
                     </div>                    
                   </a>
-                    
-
                 </div>
                 <div class="portfolio-image-container">
                     <a href="https://sanjay-kandpal.github.io/jsCalculator/" target="_blank">
@@ -192,8 +193,6 @@
                         </div>
                     </a>                   
                 </div>
-                
-
             </div>
         </section>
         <section id="contact-us" >
@@ -237,7 +236,5 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  <script src="script.js"></script>
-
-    
 </body>
 </html>

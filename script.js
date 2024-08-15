@@ -1,4 +1,4 @@
-var words = ['Hello! I am front-end developer in search of internship.'],
+var words = ['Hello! I am Full-Stack Developer.'],
     part,
     i = 0,
     offset = 0,
@@ -7,12 +7,12 @@ var words = ['Hello! I am front-end developer in search of internship.'],
     skip_count = 0,
     skip_delay = 15,
     speed = 70;
+
 var wordflick = function () {
   setInterval(function () {
     if (forwards) {
       if (offset >= words[i].length) {
-        ++skip_count;
-        
+        ++skip_count;        
       }
     }
     else {
@@ -34,12 +34,37 @@ var wordflick = function () {
         offset--;
       }
     }
-    $('#about-para').text(part);
-  },speed);
+    
+    // Split the text and wrap "Full-Stack Developer" in a span
+    var highlightedText = part.replace(
+      /(Full-Stack Developer)/g, 
+      '<span class="highlight">$1</span>'
+    );
+    
+    $('#about-para').html(highlightedText);
+
+    // Update highlight width
+    var fullPhrase = "Full-Stack Developer";
+    var visiblePart = part.match(/Full-Stack Developer/);
+    if (visiblePart) {
+      var percentage = (visiblePart[0].length / fullPhrase.length) * 100;
+      $('.highlight').css('--highlight-width', percentage + '%');
+    }
+  }, speed);
 };
 
 $(document).ready(function () {
   wordflick();
+  
+  // Add CSS for the highlight class and animation
+  $('<style>')
+    .prop('type', 'text/css')
+    .html(`
+      .highlight {
+        background-image: linear-gradient(to right, yellow var(--highlight-width, 0%), transparent var(--highlight-width, 0%));
+        background-repeat: no-repeat;
+        transition: background-image 111.8s ease-out;
+      }
+    `)
+    .appendTo('head');
 });
-
-// Hello! I am front-end developer in search of work to improve my skills
