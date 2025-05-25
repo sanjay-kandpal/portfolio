@@ -508,4 +508,55 @@ strong{
     border-radius: 30%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow to the second line */
   }
+
+/* GSAP Animation Enhancements */
+.highlight {
+    background: linear-gradient(90deg, #ffff00 0%, #ff6b6b 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00;
+    }
+    to {
+        text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b;
+    }
+}
+
+/* Smooth transitions for GSAP animations */
+* {
+    will-change: transform, opacity;
+}
+
+/* Enhanced hover effects */
+.portfolio-image-container {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.skill-progress {
+    overflow: hidden;
+}
+
+/* Improved timeline animations */
+.timeline-box {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+/* Better responsive design for animations */
+@media (max-width: 768px) {
+    .timeline-box {
+        transform: translateY(50px);
+    }
+    
+    .skill-progress {
+        transform: translateY(30px);
+    }
+}
  
