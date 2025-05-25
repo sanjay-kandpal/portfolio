@@ -173,8 +173,50 @@ strong{
     padding: 0.5rem;
 }
 .section-heading{
-    color: blue;
+    color: #2857a4;
     font-size: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 75px;
+    position: relative;
+}
+
+.heading-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.heading-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.heading-icon:hover::before {
+    left: 100%;
+}
+
+.heading-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
 }
 /* Common Margin Classess */
 .mb75px{
@@ -482,31 +524,61 @@ strong{
 
 .underline {
     font-size: 3rem;
-    font-family: sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
     position: relative;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #2857a4 0%, #667eea 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
   }
   
   .underline::before,
   .underline::after {
     content: "";
     width: 100%;
-    height: 5px;
+    height: 4px;
     position: absolute;
     left: 0;
+    border-radius: 2px;
   }
   
   .underline::before {
-    bottom: -10px;
-    background-color: red;
-    border-radius: 0%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow to the first line */
+    bottom: -12px;
+    background: linear-gradient(90deg, #ff6b6b 0%, #feca57 100%);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    animation: slideInLeft 1s ease-out 0.5s both;
   }
   
   .underline::after {
-    bottom: -18px; /* Offset the second underline */
-    background-color: blue;
-    border-radius: 30%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow to the second line */
+    bottom: -20px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    animation: slideInRight 1s ease-out 0.7s both;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      width: 0;
+      left: 50%;
+    }
+    to {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      width: 0;
+      right: 50%;
+    }
+    to {
+      width: 100%;
+      right: 0;
+    }
   }
 
 /* GSAP Animation Enhancements */

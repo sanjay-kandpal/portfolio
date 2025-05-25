@@ -17,6 +17,7 @@ function initializeGSAPAnimations() {
     gsap.set(".timeline-box", { x: 100, opacity: 0 });
     gsap.set(".portfolio-image-container", { y: 50, opacity: 0 });
     gsap.set(".section-heading", { y: 50, opacity: 0 });
+    gsap.set(".heading-icon", { scale: 0, rotation: -180, opacity: 0 });
 
     // Header animations timeline
     const headerTl = gsap.timeline();
@@ -93,11 +94,10 @@ function initializeGSAPAnimations() {
 
     // Section headings animation
     gsap.utils.toArray(".section-heading").forEach(heading => {
-        gsap.to(heading, {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out",
+        const icon = heading.querySelector('.heading-icon');
+        const underlineText = heading.querySelector('.underline');
+        
+        const headingTl = gsap.timeline({
             scrollTrigger: {
                 trigger: heading,
                 start: "top 80%",
@@ -105,6 +105,26 @@ function initializeGSAPAnimations() {
                 toggleActions: "play none none reverse"
             }
         });
+        
+        headingTl
+            .to(heading, {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: "power3.out"
+            })
+            .to(icon, {
+                scale: 1,
+                rotation: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: "elastic.out(1, 0.5)"
+            }, "-=0.6")
+            .to(underlineText, {
+                opacity: 1,
+                duration: 0.6,
+                ease: "power2.out"
+            }, "-=0.4");
     });
 
     // Skills section animations
@@ -295,6 +315,27 @@ function initializeGSAPAnimations() {
             end: "bottom top",
             scrub: true
         }
+    });
+
+    // Heading icon hover animations
+    gsap.utils.toArray(".heading-icon").forEach(icon => {
+        icon.addEventListener('mouseenter', () => {
+            gsap.to(icon, {
+                rotation: 360,
+                scale: 1.2,
+                duration: 0.6,
+                ease: "power2.out"
+            });
+        });
+
+        icon.addEventListener('mouseleave', () => {
+            gsap.to(icon, {
+                rotation: 0,
+                scale: 1,
+                duration: 0.6,
+                ease: "power2.out"
+            });
+        });
     });
 
     // Smooth scroll for navigation links
